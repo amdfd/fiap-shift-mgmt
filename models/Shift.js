@@ -1,12 +1,10 @@
 const { openDb } = require('../dbConfig.js');
 
-async function createShift(userId, shiftStart, shiftEnd) {
+async function createShift(userId, shiftDate, shiftStart, shiftEnd) {
   const db = await openDb();
   const result = await db.run(
-    'INSERT INTO shifts (user_id, shift_start, shift_end) VALUES (?, ?, ?)',
-    userId,
-    shiftStart,
-    shiftEnd,
+    'INSERT INTO shifts (user_id, shift_date, shift_start, shift_end) VALUES (?, ?, ?, ?)',
+    [userId, shiftDate, shiftStart, shiftEnd],
   );
   return result;
 }

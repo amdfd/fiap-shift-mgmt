@@ -16,6 +16,7 @@ async function initializeDb() {
     user_id INTEGER,
     shift_start DATETIME,
     shift_end DATETIME,
+    shift_date DATE,
     FOREIGN KEY(user_id) REFERENCES users(id)
   )`);
 }

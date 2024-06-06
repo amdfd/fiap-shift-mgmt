@@ -7,8 +7,10 @@
 
 <body>
   <h1>Welcome, <%= user.name %>!</h1>
-  <a>Register new shift</a>
-  <h2>Here's a list of your registered shifts:</h2>
+  <a href="/register-shift?userId=<%= user.id %>">Register Shift</a>
+  <a href="/view-shifts?userId=<%= user.id %>">View Shifts</a>
+  <a href="/update-user?userId=<%= user.id %>">My Account</a>
+  <button onclick="window.location.href='/'">Logout</button>
 </body>
 
 </html>
