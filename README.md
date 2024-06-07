@@ -9,8 +9,8 @@ All data must be saved in a relational database of my choosing.
 - [x] Setup relational database (SQLite)
 - [x] Create User model
 - [x] Create User controller
-- [ ] Create Shift model
-- [ ] Create Shift controller
+- [x] Create Shift model
+- [x] Create Shift controller
 - [ ] Create Home view
 - [ ] Create Model views
 - [ ] Create Shift views
