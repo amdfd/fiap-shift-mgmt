@@ -11,6 +11,11 @@ router.get('/create', (req, res) => {
   res.render('createUser');
 });
 
+router.get('/:id', async (req, res) => {
+  const user = await User.getUserById(req.params.id);
+  res.render('users', { user });
+});
+
 router.post('/', async (req, res) => {
   const { name, email } = req.body;
   const user = await User.getUserByNameAndEmail(name, email);
@@ -22,20 +27,20 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.get('/:id', async (req, res) => {
+router.get('/:id/edit', async (req, res) => {
   const user = await User.getUserById(req.params.id);
-  res.render('users', { user });
+  res.render('updateUser', { user });
 });
 
-router.put('/update-user', async (req, res) => {
+router.post('/:id/update', async (req, res) => {
   const { name, email } = req.body;
-  const id = req.query.userId;
+  const id = req.params.id;
   try {
     const result = await User.updateUser(id, name, email);
     if (result.changes === 0) {
       return res.status(404).send('User not found');
     }
-    res.status(200).send('User updated successfully');
+    res.redirect(`/users/${id}`);
   } catch (error) {
     res.status(500).send('Internal server error');
   }

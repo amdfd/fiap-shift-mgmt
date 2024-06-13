@@ -2,14 +2,14 @@
 <html>
 
 <head>
-  <title>User dashboard</title>
+  <title>User Dashboard</title>
 </head>
 
 <body>
   <h1>Welcome, <%= user.name %>!</h1>
   <a href="/register-shift?userId=<%= user.id %>">Register Shift</a>
   <a href="/view-shifts?userId=<%= user.id %>">View Shifts</a>
-  <a href="/update-user?userId=<%= user.id %>">My Account</a>
+  <a href="/users/<%= user.id %>/edit">My Account</a>
   <button onclick="window.location.href='/'">Logout</button>
 </body>
 

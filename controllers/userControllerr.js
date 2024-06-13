@@ -20,10 +20,9 @@ router.get('/users/:id', async (req, res) => {
 });
 
 router.put('/users/:id', async (req, res) => {
-  const { id } = req.params;
   const { name, email } = req.body;
-  const result = await User.updateUser(id, name, email);
-  res.json(result);
+  await User.updateUser(req.params.id, name, email);
+  res.redirect(`/users/${req.params.id}`);
 });
 
 router.delete('/users/:id', async (req, res) => {
