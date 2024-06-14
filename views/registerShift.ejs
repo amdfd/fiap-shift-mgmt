@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
+<%- include('header') %>
 
-<head>
-  <title>Register shift</title>
-</head>
-
-<body>
-  <h1>Register shift</h1>
-  <button onclick="window.history.back();">Go Back</button>
+  <h1 class="inner-titles">Register Shift</h1>
+  <button class="back-btn" onclick="window.history.back();">Go Back</button>
   <form action="/register-shift" method="POST">
     <input type="hidden" name="userId" value="<%= userId %>">
     <input type="date" name="shiftDate">
@@ -15,6 +9,5 @@
     <input type="time" name="shiftEnd" step="60">
     <button type="submit">Submit</button>
   </form>
-</body>
 
-</html>
+  <%- include('footer') %>

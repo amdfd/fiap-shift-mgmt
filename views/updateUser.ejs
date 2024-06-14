@@ -1,14 +1,8 @@
-<!DOCTYPE html>
-<html>
+<%- include('header') %>
 
-<head>
-  <title>My Account</title>
-</head>
-
-<body>
-  <h1>My Account</h1>
-  <button onclick="window.history.back();">Go Back</button>
-  <h2>Change name or email:</h2>
+  <h1 class="inner-titles">My Account</h1>
+  <button class="back-btn" onclick="window.history.back();">Go Back</button>
+  <h2 class="inner-titles">Change name or email:</h2>
   <form method="post" action="/users/<%= user.id %>/update">
     <input type="hidden" name="id" value="<%= user.id %>">
     <label for="name">Name:</label><br>
@@ -17,6 +11,5 @@
     <input type="email" id="email" name="email" value="<%= user.email %>" required><br>
     <input type="submit" value="Update">
   </form>
-</body>
 
-</html>
+  <%- include('footer') %>

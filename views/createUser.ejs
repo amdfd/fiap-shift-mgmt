@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html>
+<%- include('header') %>
 
-<head>
-  <title>Login / Sign Up</title>
-</head>
-
-<body>
-  <h1>Login / Sign Up</h1>
+  <h1 class="inner-titles">Login / Sign Up</h1>
   <form action="/users" method="POST">
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name"><br>
@@ -14,6 +8,5 @@
     <input type="text" id="email" name="email"><br>
     <input type="submit" value="Submit">
   </form>
-</body>
 
-</html>
+  <%- include('footer') %>

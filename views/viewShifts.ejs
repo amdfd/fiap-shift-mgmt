@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
+<%- include('header') %>
 
-<head>
-  <title>My Shifts</title>
-</head>
-
-<body>
-  <h1>My Shifts:</h1>
-  <button onclick="window.history.back();">Go Back</button>
+  <h1 class="inner-titles">My Shifts</h1>
+  <button class="back-btn" onclick="window.history.back();">Go Back</button>
   <table>
     <thead>
       <tr>
@@ -32,6 +26,5 @@
         <% }); %>
     </tbody>
   </table>
-</body>
 
-</html>
+  <%- include('footer') %>

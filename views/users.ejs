@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html>
+<%- include('header') %>
 
-<head>
-  <title>User Dashboard</title>
-</head>
+  <h1 class="inner-titles">Welcome, <%= user.name %>!</h1>
+  <div class="dashboard-links">
+    <a href="/register-shift?userId=<%= user.id %>">Register Shift</a>
+    <a href="/view-shifts?userId=<%= user.id %>">View Shifts</a>
+    <a href="/users/<%= user.id %>/edit">My Account</a>
+  </div>
+  <button class="logout-btn" onclick="window.location.href='/'">Logout</button>
 
-<body>
-  <h1>Welcome, <%= user.name %>!</h1>
-  <a href="/register-shift?userId=<%= user.id %>">Register Shift</a>
-  <a href="/view-shifts?userId=<%= user.id %>">View Shifts</a>
-  <a href="/users/<%= user.id %>/edit">My Account</a>
-  <button onclick="window.location.href='/'">Logout</button>
-</body>
-
-</html>
+  <%- include('footer') %>
