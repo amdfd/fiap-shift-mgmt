@@ -11,6 +11,14 @@ All data must be saved in a relational database of my choosing.
 - [x] Create User controller
 - [x] Create Shift model
 - [x] Create Shift controller
-- [ ] Create Home view
-- [ ] Create Model views
-- [ ] Create Shift views
+- [x] Create Login/Sign In view
+- [x] Create User Dashboard view
+- [x] Create Add Shift view
+- [x] Create View Shifts view
+- [x] Create My Account view
+- [x] Add Update Account feature
+- [ ] Add Delete Account feature
+- [ ] Add Update Shift feature
+- [ ] Add Delete Shift feature
+- [ ] Add styles
+
