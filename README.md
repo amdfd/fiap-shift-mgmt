@@ -20,5 +20,5 @@ All data must be saved in a relational database of my choosing.
 - [ ] Add Delete Account feature
 - [ ] Add Update Shift feature
 - [ ] Add Delete Shift feature
-- [ ] Add styles
+- [x] Add styles
 
